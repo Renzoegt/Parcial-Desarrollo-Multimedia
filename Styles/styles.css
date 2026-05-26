@@ -449,3 +449,122 @@ footer { background: var(--bg); border-top: 1px solid var(--border); padding: va
   .newsletter-input { width: 100%; }
   .newsletter-btn { width: 100%; }
 }
+
+
+/* Limitar el ancho del artículo para legibilidad óptima */
+.post-container {
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.post-navigation {
+  max-width: 740px;
+  margin: 2rem auto 1rem auto;
+}
+
+.back-to-blog {
+  color: var(--text-muted, #888);
+  text-decoration: none;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.back-to-blog:hover {
+  color: var(--accent, #c9f06e);
+}
+
+/* Tipografías del Post */
+.post-full-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2.8rem;
+  line-height: 1.15;
+  margin: 1rem 0 1.5rem 0;
+  color: var(--text-color, #fff);
+}
+
+.post-meta-top {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.9rem;
+  color: var(--text-muted, #a0a0a0);
+}
+
+.post-lead {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--text-muted, #ccc);
+  margin-bottom: 2.5rem;
+}
+
+/* Marcadores de imagen */
+.post-main-image {
+  width: 100%;
+  height: 350px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px dashed rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.post-image-placeholder {
+  font-family: 'Outfit', sans-serif;
+  color: #666;
+}
+
+/* Estilos de Rich Text (El cuerpo del artículo) */
+.post-body-content {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.75;
+  color: var(--text-content, #e0e0e0);
+}
+
+.post-body-content p {
+  margin-bottom: 1.75rem;
+}
+
+.post-body-content h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.85rem;
+  margin: 2.5rem 0 1rem 0;
+  color: #fff;
+}
+
+/* Bloques de código */
+.post-body-content pre {
+  background: #141414;
+  border: 1px solid #262626;
+  padding: 1.25rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.post-body-content code {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.95rem;
+  color: #e5c07b; /* Tono cálido para código */
+}
+
+/* Citas (Blockquotes) */
+.post-body-content blockquote {
+  border-left: 3px solid var(--accent, #c9f06e);
+  margin: 2rem 0;
+  padding-left: 1.5rem;
+  font-style: italic;
+  color: #b5b5b5;
+}
+
+.post-footer {
+  margin-top: 4rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 3rem;
+}

@@ -36,11 +36,11 @@
   <div class="nav-divider"></div>
 
   <nav>
-    <a href="../index.html" class="nav-item active">
+    <a href="../index.html" class="nav-item">
       <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
       Inicio
     </a>
-    <a href="projects.html" class="nav-item">
+    <a href="projects.html" class="nav-item active">
       <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
       Proyectos
     </a>
@@ -82,29 +82,28 @@
   <div class="filter-bar">
     <span class="filter-label">Filtrar:</span>
     <button class="filter-btn active" data-filter="all">Todos</button>
-    <button class="filter-btn" data-filter="web">Web</button>
-    <button class="filter-btn" data-filter="data">Data</button>
-    <button class="filter-btn" data-filter="mobile">Mobile</button>
-    <button class="filter-btn" data-filter="devops">DevOps</button>
+    <button class="filter-btn" data-filter="networking">Networking</button>
+    <button class="filter-btn" data-filter="python">Python</button>
+    <button class="filter-btn" data-filter="mobile">Web</button>
     <button class="filter-btn" data-filter="diseño">Diseño</button>
   </div>
 
   <div class="projects-content">
     <div class="projects-grid-full" id="projects-grid">
 
-      <a href="proyecto1.pdf" target="_blank" class="project-card" data-category="web">
+      <a href="Proyectos/grafana.html" target="_self" class="project-card" data-category="networking">
         <div class="project-thumb">
-          <div class="project-thumb-placeholder">imagen del proyecto</div>
+          <img class="project-thumb-placeholder" src="../../Assets/Grafana.webp" alt="Imagen del proyecto">
           <div class="thumb-overlay"><span class="thumb-cta">Ver caso →</span></div>
         </div>
         <div class="project-info">
-          <div class="project-year">2024</div>
-          <div class="project-name">Nombre del Proyecto 1</div>
+          <div class="project-year">2025</div>
+          <div class="project-name">Telemetría e Integración de Dashboards con SNMP, Zabbix y Grafana</div>
           <p class="project-desc">Descripción del proyecto, problema que resuelve y el impacto generado en métricas clave.</p>
           <div class="project-tags">
-            <span class="ptag ptag-green">React</span>
-            <span class="ptag ptag-teal">Node.js</span>
-            <span class="ptag ptag-default">PostgreSQL</span>
+            <span class="ptag ptag-green">SNMP</span>
+            <span class="ptag ptag-teal">Zabbix</span>
+            <span class="ptag ptag-default">Grafana</span>
           </div>
         </div>
       </a>
