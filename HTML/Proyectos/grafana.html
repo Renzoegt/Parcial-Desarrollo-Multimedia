@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Docker para developers que no son DevOps — Renzo Gómez Terrussi</title>
+<title>Grafana — Renzo Gómez Terrussi</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../Styles/styles.css">
@@ -39,11 +39,11 @@
       <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
       Inicio
     </a>
-    <a href="../projects.html" class="nav-item">
+    <a href="../projects.html" class="nav-item active">
       <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
       Proyectos
     </a>
-    <a href="../blog.html" class="nav-item active">
+    <a href="../blog.html" class="nav-item">
       <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
       Blog
     </a>
@@ -77,28 +77,29 @@
   <article class="post-container">
     <header class="post-header">
       <div class="post-meta-top">
-        <span class="post-badge" style="color:var(--accent);background:rgba(201,240,110,0.1);border-color:rgba(201,240,110,0.3)">Herramientas</span>
+        <span class="post-badge" style="color:var(--accent);background:rgba(201,240,110,0.1);border-color:rgba(201,240,110,0.3)">Networking</span>
+        <span class="post-badge" style="color:var(--accent);background:rgba(201,240,110,0.1);border-color:rgba(201,240,110,0.3)">Linux</span>
         <span class="post-date">20 nov 2024</span>
         <span class="post-read-time">· 12 min de lectura</span>
       </div>
       
-      <h1 class="post-full-title">Docker para developers que no son DevOps</h1>
+      <h1 class="post-full-title">Telemetría de Red Distribuida e Integración de Dashboards en Tiempo Real con SNMP, Zabbix y Grafana</h1>
       
       <p class="post-lead">
-        Una guía práctica para entender y usar Docker en tu workflow sin tener que aprender Kubernetes. 
-        Dejá de pelear con "en mi máquina funciona".
+        Proyecto de monitoreo de red utilizando SNMP para la recolección de datos, Zabbix como sistema de monitoreo y Grafana para la visualización en tiempo real. El proyecto se centró en la implementación de una solución de telemetría distribuida para una red empresarial, permitiendo la supervisión proactiva del rendimiento y la detección temprana de problemas.
       </p>
 
-      <div class="post-main-image">
-        <div class="post-image-placeholder">Imagen de portada del artículo</div>
+      <div style="margin-top: 24px; justify-content: center; display: flex;">
+        <div class="post-main-image" style="width: 66%;">
+          <img style="width: 100%; height: auto;" src="../../Assets/red-graf.webp" alt="arquitectura de monitoreo con SNMP, Zabbix y Grafana">
+        </div>
       </div>
     </header>
 
     <section class="post-body-content">
-      <p>Uno de los mayores dolores de cabeza cuando empezamos a trabajar en equipo o desplegamos software es la famosa frase: <em>"En mi máquina sí funciona"</em>. Diferentes versiones de Node, bases de datos configuradas a medias, o dependencias del sistema que faltan.</p>
-      
-      <h2>¿Qué es realmente un contenedor?</h2>
-      <p>Para no meterte tecnicismos aburridos: un contenedor es como una caja que empaqueta tu código y <strong>todo</strong> lo que ese código necesita para ejecutarse de manera aislada. Si corre en tu PC, va a correr exactamente igual en el servidor.</p>
+      <p>Para la simulación se eligío una simple red LAN universitaria con dos laboratorios y un switch de administración. Para esta arquitectura buscamos resolver el problema de <em>Administración, visibilidad y monitoreo centralizado de la red</em>. </p> 
+      <h2>¿Cual Fué mi Rol?</h2>
+      <p>Dentro del proyecto fue el de ingeniero de infraestructura y Administrador de telemetría, fui el responsable del diseño y del cálculo del direccionamiento IPv4 de la topología corporativa.</p>
 
       <blockquote>
         "Docker no reemplaza a las máquinas virtuales, las hace obsoletas para el desarrollo de aplicaciones del día a día."
