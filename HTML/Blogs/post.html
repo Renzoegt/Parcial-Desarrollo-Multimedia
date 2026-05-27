@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Título del artículo — Tu Nombre</title>
+<title>Adiós SNMP Polling: El Cambio de Paradigma hacia Streaming Telemetry — Renzo Gómez Terrussi</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../Styles/style.css">
@@ -15,7 +15,6 @@
 </button>
 <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-<!-- SIDEBAR -->
 <aside id="sidebar">
   <div class="sidebar-name">Renzo Gómez Terrussi</div>
   <div class="sidebar-role">Analista en Sistemas de Información</div>
@@ -39,11 +38,11 @@
       <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
       Inicio
     </a>
-    <a href="../projects.html" class="nav-item active">
+    <a href="../projects.html" class="nav-item">
       <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
       Proyectos
     </a>
-    <a href="../blog.html" class="nav-item">
+    <a href="../blog.html" class="nav-item active">
       <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
       Blog
     </a>
@@ -67,14 +66,11 @@
     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gomezterrussirenzo@gmail.com" target="_blank" class="contact-link" title="Email">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
     </a>
-    
   </div>
 </aside>
 
-<!-- MAIN -->
 <main>
 
-  <!-- BACK BAR -->
   <div class="entry-back-bar">
     <a href="../blog.html" class="back-link">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="15 18 9 12 15 6"/></svg>
@@ -86,148 +82,135 @@
       Inicio
     </a>
     <div class="back-divider"></div>
-    <span class="back-current">Título del artículo</span>
+    <span class="back-current">Adiós SNMP Polling</span>
   </div>
 
-  <!-- ARTICLE HEADER -->
   <div class="article-header">
     <div class="article-header-meta">
-      <span class="article-category">Desarrollo</span>
-      <span class="article-date">12 may 2025</span>
-      <span class="article-read-time">· 8 min de lectura</span>
+      <span class="article-category">Infraestructura</span>
+      <span class="article-date">27 may 2026</span>
+      <span class="article-read-time">· 6 min de lectura</span>
     </div>
 
-    <h1 class="article-title">Título completo<br>del <em>artículo</em></h1>
+    <h1 class="article-title">Adiós SNMP Polling:<br>El cambio hacia <em>Streaming Telemetry</em></h1>
 
     <p class="article-lead">
-      Un párrafo introductorio de 2–3 oraciones que resume el argumento central,
-      el problema que se va a tratar y qué va a aprender el lector al terminar.
-      Lo suficientemente atractivo para que sigan leyendo.
+      El monitoreo de infraestructura de red está viviendo su transformación más profunda en décadas. En esta entrada analizamos las limitaciones del polling clásico de SNMP, los fundamentos de la telemetría guiada por eventos y cómo implementar un pipeline moderno de datos de series temporales.
     </p>
 
     <div class="article-author-row">
       <div>
-        <div class="author-name">Tu Nombre</div>
-        <div class="author-handle">Tu Rol.</div>
+        <div class="author-name">Renzo Gómez Terrussi</div>
+        <div class="author-handle">Analista en Sistemas de Información</div>
       </div>
     </div>
   </div>
 
-  <!-- COVER IMAGE -->
   <div class="article-cover">
-    <!-- <img src="blog-cover.jpg" alt="Cover del artículo"> -->
-    <div class="article-cover-placeholder">imagen de portada del artículo (16:7)</div>
+    <img src="../../Assets/streaming telemetry.webp" alt="Ilustración conceptual de la evolución del monitoreo de red desde SNMP hacia Telemetry">
   </div>
 
-  <!-- ARTICLE GRID: body + TOC -->
   <div class="article-wrap">
 
-    <!-- ARTICLE BODY -->
     <article class="article-body">
 
-      <h2 id="seccion-1">Primera sección del artículo</h2>
+      <h2 id="limita-snmp">Las grietas del modelo SNMP tradicional</h2>
       <p>
-        Comenzá el desarrollo del primer tema. Este es el cuerpo principal del artículo.
-        Cada <code>h2</code> que uses acá va a aparecer automáticamente en el índice lateral.
-        Escribí con fluidez — no es necesario que sea largo, pero sí claro y útil.
+        Durante más de treinta años, el Protocolo Simple de Administración de Red (SNMP) ha sido el pilar indiscutido para el monitoreo de infraestructura. Sin embargo, su arquitectura basada en <strong>polling</strong> (donde un servidor central pregunta periódicamente a cada dispositivo su estado) introduce una ineficiencia estructural insostenible para los volúmenes de tráfico actuales.
       </p>
       <p>
-        Podés usar <strong>negrita</strong> para enfatizar conceptos clave, y <em>cursiva</em>
-        para términos técnicos o énfasis estilístico. Los <a href="#">links</a> se ven en verde lima.
+        Cuando un sistema como Zabbix realiza consultas cada 5 minutos, la red se vuelve completamente ciega ante eventos críticos efímeros. Fenómenos como los <em>microbursts</em> (ráfagas de tráfico saturantes de milisegundos de duración) quedan completamente promediados en la gráfica, ocultando problemas severos de descartes de paquetes.
       </p>
 
       <div class="article-callout callout-tip">
         <div class="callout-label">💡 Tip</div>
-        <strong>Consejo práctico:</strong> Usá estos callouts para destacar ideas importantes,
-        advertencias o datos que el lector no debería perderse.
+        <strong>La trampa del promedio:</strong> Un enlace puede figurar al 40% de utilización en tu NMS tradicional, pero haber estado colapsado al 100% durante picos intermitentes de un segundo. SNMP jamás te mostrará esa realidad.
       </div>
 
-      <h3 id="subseccion-1a">Subtema dentro de la primera sección</h3>
+      <h3 id="impacto-cpu">El costo computacional de procesar MIBs</h3>
       <p>
-        Los <code>h3</code> aparecen en el índice con sangría para mostrar la jerarquía.
-        Son útiles para artículos más largos donde hay varios ángulos dentro de un mismo tema.
+        Cada consulta SNMP requiere que el dispositivo de red recorra internamente su base de información de gestión (MIB), convierta esos datos lógicos a texto ASN.1 y los empaquete en UDP. Si incrementamos la frecuencia de polling a intervalos de pocos segundos para ganar resolución, la CPU del enrutador o switch se dispara drásticamente, comprometiendo el plano de forwarding de datos.
       </p>
 
       <figure class="article-figure">
-        <!-- <img src="imagen-1.jpg" alt="Descripción"> -->
         <div style="background:var(--bg3);aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;">
-          <span style="font-family:var(--font-mono);font-size:.75rem;color:var(--text3)">imagen ilustrativa</span>
+          <img src="../../Assets/vs.webp" alt="">
         </div>
-        <figcaption>Pie de imagen: descripción breve de lo que se muestra y por qué es relevante.</figcaption>
+        <figcaption>Diferencia en el flujo y tiempo entre enfoques de monitoreo.</figcaption>
       </figure>
 
       <hr class="article-hr">
 
-      <h2 id="seccion-2">Segunda sección: el núcleo del argumento</h2>
+      <h2 id="que-es-telemetry">¿Qué es Streaming Telemetry?</h2>
       <p>
-        Acá va el desarrollo central. Si tu artículo tiene un argumento principal,
-        este es el lugar donde lo desarrollás con más profundidad, ejemplos, evidencia o código.
+        La telemetría moderna cambia el paradigma por completo: en lugar de esperar a que le pregunten, el dispositivo de red es configurado para <strong>empujar (stream)</strong> de forma continua y automatizada sus métricas hacia un colector centralizado. 
+      </p>
+      <p>
+        Este flujo de datos se realiza bajo demanda mediante conexiones persistentes, utilizando codificaciones ultraligeras y eficientes en rendimiento como Protocol Buffers (gRPC) o transporte crudo sobre UDP/TCP. Esto permite obtener métricas en tiempo real con granularidad de hasta milisegundos sin penalizar el rendimiento del hardware.
       </p>
 
-      <pre><code>// Ejemplo de bloque de código
-function ejemplo(param) {
-  const resultado = procesarDatos(param);
-  return resultado.filter(Boolean);
-}</code></pre>
+      <pre><code># Ejemplo conceptual de suscripción Dial-Out usando Python para escuchar datos gRPC
+import grpc
+from telemetry_pb2 import TelemetryStream
+
+def listen_network_metrics():
+    channel = grpc.insecure_channel('0.0.0.0:50051')
+    stub = TelemetryStream.stub(channel)
+    for notification in stub.StreamMetrics(TelemetryRequest(sub_id="interfaces")):
+        print(f"Interface: {notification.path} | Speed: {notification.counters.bps_in}")
+</code></pre>
 
       <p>
-        Después del código, podés explicar qué hace, por qué elegiste ese enfoque
-        o cuáles son sus limitaciones.
+        A través de este enfoque orientado a la automatización (NetDevOps), podemos desacoplar el procesamiento de la información, permitiendo que la analítica de red se gestione con las mismas herramientas del mundo de la ingeniería de software y contenedores.
       </p>
 
       <ul>
-        <li>Primer punto a destacar de esta sección</li>
-        <li>Segundo punto con información complementaria</li>
-        <li>Tercer punto que cierra el argumento</li>
+        <li><strong>Modelo Push:</strong> Eliminación del overhead generado por las peticiones Request/Response constantes.</li>
+        <li><strong>Granularidad Extrema:</strong> Almacenamiento preciso apto para la detección temprana de anomalías lógicas.</li>
+        <li><strong>Estructura Consistente:</strong> Uso de modelos de datos estandarizados basados en YANG.</li>
       </ul>
 
       <div class="article-callout callout-warn">
         <div class="callout-label">⚠️ Atención</div>
-        <strong>Cuidado con esto:</strong> Usá el callout naranja para advertencias o cosas
-        que el lector debe tener en cuenta antes de implementar algo.
+        <strong>Gobernanza de Datos:</strong> Al habilitar streaming a frecuencias muy altas (ej. 1 segundo), la cantidad de registros generados crece de manera exponencial. Es obligatorio acompañar este despliegue con motores específicos de almacenamiento masivo.
       </div>
 
       <hr class="article-hr">
 
-      <h2 id="seccion-3">Tercera sección: casos o ejemplos</h2>
+      <h2 id="pipeline-moderno">Diseñando el Pipeline de Datos ideal</h2>
       <p>
-        Ilustrá el argumento con un caso concreto. Puede ser algo que viviste,
-        un proyecto que hiciste, o un ejemplo del mundo real que hace más tangible la idea.
+        Para persistir y consumir de manera ágil estos flujos de información, los esquemas relacionales convencionales quedan obsoletos frente a la velocidad de inserción requerida. La arquitectura recomendada en el ecosistema abierto se apoya en bases de datos orientadas a series temporales (TSDB) o de análisis columnar.
       </p>
 
       <blockquote class="article-pullquote">
-        <p>"Una cita o idea poderosa que querés destacar visualmente. Puede ser tuya o de alguien que citás."</p>
-        <cite>— Fuente o autor, si aplica</cite>
+        <p>"Configurar colectores eficientes como Akvorado, combinados con ClickHouse, nos da la capacidad de consultar millones de flujos consolidados en milisegundos."</p>
+        <cite>— Buenas prácticas en observabilidad de infraestructura</cite>
       </blockquote>
 
       <div class="article-callout callout-info">
         <div class="callout-label">ℹ️ Para saber más</div>
-        <strong>Recurso recomendado:</strong> Usá el callout teal para referencias externas,
-        lecturas complementarias o contexto adicional.
+        <strong>Tecnología asociada:</strong> El uso de bases de datos columnares permite agrupar tráficos de red no solo por variables básicas, sino cruzar instantáneamente datos de protocolos o subredes de origen en tableros interactivos de Grafana.
       </div>
 
       <hr class="article-hr">
 
-      <h2 id="conclusiones">Conclusiones</h2>
+      <h2 id="conclusiones">Conclusiones y próximos pasos</h2>
       <p>
-        Cerrá el artículo sintetizando los puntos principales y dejando al lector
-        con algo accionable: una tarea, una pregunta para reflexionar, o un próximo paso concreto.
+        SNMP sigue siendo de utilidad para verificar estados binarios elementales (como si un equipo está encendido o apagado), pero ha perdido la batalla frente a las necesidades analíticas de las infraestructuras de misión crítica. 
       </p>
       <p>
-        Si querés, podés terminar con una invitación a comentar, compartir o seguirte
-        en las redes — pero que sea breve y natural, no un llamado forzado.
+        Si estás diseñando o administrando laboratorios en entornos simulados como GNS3 o redes de producción, dar el salto hacia arquitecturas basadas en streaming telemetry o análisis avanzados de flujos es el único camino viable para erradicar la opacidad en tus tableros de control. Comienza levantando una pila ligera de contenedores en una máquina Debian y migra tus métricas de interfaz hacia un modelo empujado por eventos. El cambio de visibilidad será inmediato.
       </p>
 
     </article>
 
-    <!-- TOC SIDEBAR -->
     <aside class="toc-col" id="toc">
       <div class="toc-label">En este artículo</div>
       <ul class="toc-list" id="toc-list">
-        <li class="toc-item" data-target="seccion-1"><a href="#seccion-1">Primera sección</a></li>
-        <li class="toc-item toc-h3" data-target="subseccion-1a"><a href="#subseccion-1a">Subtema dentro</a></li>
-        <li class="toc-item" data-target="seccion-2"><a href="#seccion-2">Segunda sección</a></li>
-        <li class="toc-item" data-target="seccion-3"><a href="#seccion-3">Casos y ejemplos</a></li>
+        <li class="toc-item" data-target="limita-snmp"><a href="#limita-snmp">Grietas de SNMP</a></li>
+        <li class="toc-item toc-h3" data-target="impacto-cpu"><a href="#impacto-cpu">Costo en CPU</a></li>
+        <li class="toc-item" data-target="que-es-telemetry"><a href="#que-es-telemetry">¿Qué es Telemetry?</a></li>
+        <li class="toc-item" data-target="pipeline-moderno"><a href="#pipeline-moderno">El Pipeline Ideal</a></li>
         <li class="toc-item" data-target="conclusiones"><a href="#conclusiones">Conclusiones</a></li>
       </ul>
 
@@ -249,34 +232,31 @@ function ejemplo(param) {
       </div>
     </aside>
 
-  </div><!-- end article-wrap -->
-
-  <!-- ARTICLE FOOTER -->
-  <div class="article-footer-section">
+  </div><div class="article-footer-section">
 
     <div class="article-tags-row">
       <span class="article-tags-label">Tags:</span>
-      <span class="tag">Desarrollo</span>
-      <span class="tag">Arquitectura</span>
-      <span class="tag">Node.js</span>
-      <span class="tag">Buenas prácticas</span>
+      <span class="tag">Infraestructura</span>
+      <span class="tag">Observabilidad</span>
+      <span class="tag">NetDevOps</span>
+      <span class="tag">Linux</span>
     </div>
 
     <div class="related-label">También te puede interesar</div>
     <div class="related-grid">
       <a href="#" class="related-card">
-        <div class="related-card-label">Carrera · 6 min</div>
-        <div class="related-card-title">Cómo conseguí mi primer trabajo como desarrollador</div>
+        <div class="related-card-label">Proyectos · 5 min</div>
+        <div class="related-card-title">Monitoreo y Telemetría en Tiempo Real con Grafana</div>
         <div class="related-card-arrow">Leer →</div>
       </a>
       <a href="#" class="related-card">
-        <div class="related-card-label">Herramientas · 5 min</div>
-        <div class="related-card-title">Mi setup de desarrollo en 2025</div>
+        <div class="related-card-label">Herramientas · 7 min</div>
+        <div class="related-card-title">Visibilidad de Flujos de Red y Análisis con Akvorado</div>
         <div class="related-card-arrow">Leer →</div>
       </a>
       <a href="#" class="related-card">
-        <div class="related-card-label">Producto · 7 min</div>
-        <div class="related-card-title">Por qué los MVPs fallan antes de lanzarse</div>
+        <div class="related-card-label">Automatización · 6 min</div>
+        <div class="related-card-title">Desarrollando un ABM para control de dispositivos con Python</div>
         <div class="related-card-arrow">Leer →</div>
       </a>
     </div>
