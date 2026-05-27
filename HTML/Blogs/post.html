@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Título del artículo — Tu Nombre</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="Styles/style.css">
+</head>
+<body>
+
+<button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+</button>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<!-- SIDEBAR -->
+<aside id="sidebar">
+  <div class="profile-photo">
+    <!-- <img src="foto.jpg" alt="Foto de perfil"> -->
+    <span class="profile-photo-placeholder">TN</span>
+  </div>
+  <div class="sidebar-name">Tu Nombre</div>
+  <div class="sidebar-role">Tu Rol / Especialidad</div>
+  <div class="stack-section">
+    <div class="stack-label">Stack principal</div>
+    <div class="stack-tags">
+      <span class="tag">Python</span><span class="tag">React</span><span class="tag">SQL</span>
+      <span class="tag">Node.js</span><span class="tag">Docker</span><span class="tag">AWS</span>
+    </div>
+  </div>
+  <div class="nav-divider"></div>
+  <nav>
+    <a href="index.html" class="nav-item">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Inicio
+    </a>
+    <a href="projects.html" class="nav-item">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>Proyectos
+    </a>
+    <a href="blog.html" class="nav-item active">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>Blog
+    </a>
+    <a href="cv.pdf" download class="nav-item nav-download">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Descargar CV
+    </a>
+  </nav>
+  <div class="contact-links">
+    <a href="https://linkedin.com/in/tu-perfil" target="_blank" class="contact-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+    <a href="https://github.com/tu-usuario" target="_blank" class="contact-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+    <a href="mailto:tu@email.com" class="contact-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+  </div>
+</aside>
+
+<!-- MAIN -->
+<main>
+
+  <!-- BACK BAR -->
+  <div class="entry-back-bar">
+    <a href="blog.html" class="back-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="15 18 9 12 15 6"/></svg>
+      Blog
+    </a>
+    <div class="back-divider"></div>
+    <a href="index.html" class="back-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+      Inicio
+    </a>
+    <div class="back-divider"></div>
+    <span class="back-current">Título del artículo</span>
+  </div>
+
+  <!-- ARTICLE HEADER -->
+  <div class="article-header">
+    <div class="article-header-meta">
+      <span class="article-category">Desarrollo</span>
+      <span class="article-date">12 may 2025</span>
+      <span class="article-read-time">· 8 min de lectura</span>
+    </div>
+
+    <h1 class="article-title">Título completo<br>del <em>artículo</em></h1>
+
+    <p class="article-lead">
+      Un párrafo introductorio de 2–3 oraciones que resume el argumento central,
+      el problema que se va a tratar y qué va a aprender el lector al terminar.
+      Lo suficientemente atractivo para que sigan leyendo.
+    </p>
+
+    <div class="article-author-row">
+      <div>
+        <div class="author-name">Tu Nombre</div>
+        <div class="author-handle">Tu Rol.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COVER IMAGE -->
+  <div class="article-cover">
+    <!-- <img src="blog-cover.jpg" alt="Cover del artículo"> -->
+    <div class="article-cover-placeholder">imagen de portada del artículo (16:7)</div>
+  </div>
+
+  <!-- ARTICLE GRID: body + TOC -->
+  <div class="article-wrap">
+
+    <!-- ARTICLE BODY -->
+    <article class="article-body">
+
+      <h2 id="seccion-1">Primera sección del artículo</h2>
+      <p>
+        Comenzá el desarrollo del primer tema. Este es el cuerpo principal del artículo.
+        Cada <code>h2</code> que uses acá va a aparecer automáticamente en el índice lateral.
+        Escribí con fluidez — no es necesario que sea largo, pero sí claro y útil.
+      </p>
+      <p>
+        Podés usar <strong>negrita</strong> para enfatizar conceptos clave, y <em>cursiva</em>
+        para términos técnicos o énfasis estilístico. Los <a href="#">links</a> se ven en verde lima.
+      </p>
+
+      <div class="article-callout callout-tip">
+        <div class="callout-label">💡 Tip</div>
+        <strong>Consejo práctico:</strong> Usá estos callouts para destacar ideas importantes,
+        advertencias o datos que el lector no debería perderse.
+      </div>
+
+      <h3 id="subseccion-1a">Subtema dentro de la primera sección</h3>
+      <p>
+        Los <code>h3</code> aparecen en el índice con sangría para mostrar la jerarquía.
+        Son útiles para artículos más largos donde hay varios ángulos dentro de un mismo tema.
+      </p>
+
+      <figure class="article-figure">
+        <!-- <img src="imagen-1.jpg" alt="Descripción"> -->
+        <div style="background:var(--bg3);aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;">
+          <span style="font-family:var(--font-mono);font-size:.75rem;color:var(--text3)">imagen ilustrativa</span>
+        </div>
+        <figcaption>Pie de imagen: descripción breve de lo que se muestra y por qué es relevante.</figcaption>
+      </figure>
+
+      <hr class="article-hr">
+
+      <h2 id="seccion-2">Segunda sección: el núcleo del argumento</h2>
+      <p>
+        Acá va el desarrollo central. Si tu artículo tiene un argumento principal,
+        este es el lugar donde lo desarrollás con más profundidad, ejemplos, evidencia o código.
+      </p>
+
+      <pre><code>// Ejemplo de bloque de código
+function ejemplo(param) {
+  const resultado = procesarDatos(param);
+  return resultado.filter(Boolean);
+}</code></pre>
+
+      <p>
+        Después del código, podés explicar qué hace, por qué elegiste ese enfoque
+        o cuáles son sus limitaciones.
+      </p>
+
+      <ul>
+        <li>Primer punto a destacar de esta sección</li>
+        <li>Segundo punto con información complementaria</li>
+        <li>Tercer punto que cierra el argumento</li>
+      </ul>
+
+      <div class="article-callout callout-warn">
+        <div class="callout-label">⚠️ Atención</div>
+        <strong>Cuidado con esto:</strong> Usá el callout naranja para advertencias o cosas
+        que el lector debe tener en cuenta antes de implementar algo.
+      </div>
+
+      <hr class="article-hr">
+
+      <h2 id="seccion-3">Tercera sección: casos o ejemplos</h2>
+      <p>
+        Ilustrá el argumento con un caso concreto. Puede ser algo que viviste,
+        un proyecto que hiciste, o un ejemplo del mundo real que hace más tangible la idea.
+      </p>
+
+      <blockquote class="article-pullquote">
+        <p>"Una cita o idea poderosa que querés destacar visualmente. Puede ser tuya o de alguien que citás."</p>
+        <cite>— Fuente o autor, si aplica</cite>
+      </blockquote>
+
+      <div class="article-callout callout-info">
+        <div class="callout-label">ℹ️ Para saber más</div>
+        <strong>Recurso recomendado:</strong> Usá el callout teal para referencias externas,
+        lecturas complementarias o contexto adicional.
+      </div>
+
+      <hr class="article-hr">
+
+      <h2 id="conclusiones">Conclusiones</h2>
+      <p>
+        Cerrá el artículo sintetizando los puntos principales y dejando al lector
+        con algo accionable: una tarea, una pregunta para reflexionar, o un próximo paso concreto.
+      </p>
+      <p>
+        Si querés, podés terminar con una invitación a comentar, compartir o seguirte
+        en las redes — pero que sea breve y natural, no un llamado forzado.
+      </p>
+
+    </article>
+
+    <!-- TOC SIDEBAR -->
+    <aside class="toc-col" id="toc">
+      <div class="toc-label">En este artículo</div>
+      <ul class="toc-list" id="toc-list">
+        <li class="toc-item" data-target="seccion-1"><a href="#seccion-1">Primera sección</a></li>
+        <li class="toc-item toc-h3" data-target="subseccion-1a"><a href="#subseccion-1a">Subtema dentro</a></li>
+        <li class="toc-item" data-target="seccion-2"><a href="#seccion-2">Segunda sección</a></li>
+        <li class="toc-item" data-target="seccion-3"><a href="#seccion-3">Casos y ejemplos</a></li>
+        <li class="toc-item" data-target="conclusiones"><a href="#conclusiones">Conclusiones</a></li>
+      </ul>
+
+      <div class="toc-divider"></div>
+
+      <div class="toc-actions">
+        <a href="blog.html" class="toc-action-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="15 18 9 12 15 6"/></svg>
+          Volver al blog
+        </a>
+        <a href="index.html" class="toc-action-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+          Ir al inicio
+        </a>
+        <button class="toc-action-btn" id="copyLinkBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          Copiar link
+        </button>
+      </div>
+    </aside>
+
+  </div><!-- end article-wrap -->
+
+  <!-- ARTICLE FOOTER -->
+  <div class="article-footer-section">
+
+    <div class="article-tags-row">
+      <span class="article-tags-label">Tags:</span>
+      <span class="tag">Desarrollo</span>
+      <span class="tag">Arquitectura</span>
+      <span class="tag">Node.js</span>
+      <span class="tag">Buenas prácticas</span>
+    </div>
+
+    <div class="related-label">También te puede interesar</div>
+    <div class="related-grid">
+      <a href="#" class="related-card">
+        <div class="related-card-label">Carrera · 6 min</div>
+        <div class="related-card-title">Cómo conseguí mi primer trabajo como desarrollador</div>
+        <div class="related-card-arrow">Leer →</div>
+      </a>
+      <a href="#" class="related-card">
+        <div class="related-card-label">Herramientas · 5 min</div>
+        <div class="related-card-title">Mi setup de desarrollo en 2025</div>
+        <div class="related-card-arrow">Leer →</div>
+      </a>
+      <a href="#" class="related-card">
+        <div class="related-card-label">Producto · 7 min</div>
+        <div class="related-card-title">Por qué los MVPs fallan antes de lanzarse</div>
+        <div class="related-card-arrow">Leer →</div>
+      </a>
+    </div>
+
+  </div>
+
+</main>
+
+<script>
+  // Sidebar toggle
+  const toggle  = document.getElementById('menuToggle');
+  const sidebar = document.getElementById('sidebar');
+  const overlay = document.getElementById('sidebarOverlay');
+  function openSidebar()  { sidebar.classList.add('open');    overlay.classList.add('visible');    document.body.style.overflow = 'hidden'; }
+  function closeSidebar() { sidebar.classList.remove('open'); overlay.classList.remove('visible'); document.body.style.overflow = ''; }
+  toggle.addEventListener('click', () => sidebar.classList.contains('open') ? closeSidebar() : openSidebar());
+  overlay.addEventListener('click', closeSidebar);
+
+  // TOC active highlight on scroll
+  const tocItems   = document.querySelectorAll('.toc-item[data-target]');
+  const headings   = [...tocItems].map(i => document.getElementById(i.dataset.target)).filter(Boolean);
+
+  function updateTOC() {
+    let current = headings[0]?.id;
+    headings.forEach(h => {
+      if (h.getBoundingClientRect().top <= 120) current = h.id;
+    });
+    tocItems.forEach(item => {
+      item.classList.toggle('active', item.dataset.target === current);
+    });
+  }
+
+  window.addEventListener('scroll', updateTOC, { passive: true });
+  updateTOC();
+
+  // Copy link
+  document.getElementById('copyLinkBtn').addEventListener('click', () => {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      const btn = document.getElementById('copyLinkBtn');
+      const original = btn.innerHTML;
+      btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="20 6 9 17 4 12"/></svg> ¡Copiado!';
+      setTimeout(() => { btn.innerHTML = original; }, 2000);
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UI Kit — Sistema de Diseño</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../Styles/style.css"> 
+<style>
+  /* Estilos locales exclusivos para organizar el UI Kit */
+  .uikit-body { display: block; background: var(--bg); padding: 4rem 2rem; max-width: 1100px; margin: 0 auto; font-family: var(--font-sans); }
+  .uikit-header { border-bottom: 2px solid var(--border2); padding-bottom: 1.5rem; margin-bottom: 3rem; }
+  .uikit-header h1 { font-family: var(--font-serif); font-size: 2.5rem; color: var(--text); }
+  .uikit-header p { font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent); margin-top: 0.5rem; }
+  .uikit-section { margin-bottom: 4rem; }
+  .uikit-section-title { font-family: var(--font-mono); font-size: 0.75rem; color: var(--text3); text-transform: uppercase; letter-spacing: 0.15em; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; margin-bottom: 1.5rem; }
+  .uikit-grid-colors { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 1rem; }
+  .color-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; }
+  .color-sample { height: 60px; border-radius: 4px; border: 1px solid var(--border); margin-bottom: 0.75rem; }
+  .color-info { font-family: var(--font-mono); font-size: 0.75rem; }
+  .color-name { color: var(--text); font-weight: 500; margin-bottom: 2px; }
+  .color-hex { color: var(--text2); }
+  .uikit-flex { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+  .uikit-showcase { background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; padding: 2rem; margin-bottom: 1rem; }
+  .uikit-meta { font-family: var(--font-mono); font-size: 0.7rem; color: var(--text3); margin-top: 0.5rem; }
+</style>
+</head>
+<body class="uikit-body">
+<button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+</button>
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<!-- SIDEBAR -->
+<aside id="sidebar">
+
+  <div class="sidebar-name">Renzo Gómez Terrussi</div>
+  <div class="sidebar-role">Analista en Sistemas de Información</div>
+
+  <div class="stack-section">
+    <div class="stack-label">Stack Tecnológico</div>
+    <div class="stack-tags">
+      <span class="tag">Python</span>
+      <span class="tag">Linux</span>
+      <span class="tag">SQL</span>
+      <span class="tag">Zabbix</span>
+      <span class="tag">GNS3</span>
+      <span class="tag">SNMP</span>
+    </div>
+  </div>
+
+  <div class="nav-divider"></div>
+
+  <nav>
+    <a href="../index.html" class="nav-item">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+      Inicio
+    </a>
+    <a href="../HTML/projects.html" class="nav-item">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+      Proyectos
+    </a>
+    <a href="../HTML/blog.html" class="nav-item">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+      Blog
+    </a>
+    <a href="ui-kit.html" class="nav-item active">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+      UI Kit
+    </a>
+    <a href="cv.pdf" download class="nav-item nav-download">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Descargar CV
+    </a>
+  </nav>
+
+  <div class="contact-links">
+    <a href="https://www.linkedin.com/in/renzo-gómez-terrussi" target="_blank" class="contact-link" title="LinkedIn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+    </a>
+    <a href="https://github.com/renzoegt" target="_blank" class="contact-link" title="GitHub">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+    </a>
+    <a href="mailto:gomezterrussirenzo@gmail.com" class="contact-link" title="Email">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+    </a>
+  </div>
+</aside>
+<main>
+  <header class="uikit-header">
+    <h1>UI Kit & Sistema de Diseño del Portfolio</h1>
+    <p>Documentación de Colores, Tipografías y Componentes</p>
+  </header>
+
+  <section class="uikit-section">
+    <div class="uikit-section-title">MoodBoard</div>
+      <div class="project-thumb">
+          <!-- <img src="proyecto1.jpg" alt="Proyecto 1"> -->
+          <img src="moodboard.webp" alt="portada de proyecto de telemetría">
+          <div class="thumb-overlay">
+            <span class="thumb-cta">Ver proyecto →</span>
+          </div>
+        </div>
+      
+    </div>
+
+    <div class="uikit-section-title">01. Colores (Fondo y Superficie)</div>
+    <div class="uikit-grid-colors">
+      <div class="color-card">
+        <div class="color-sample" style="background: var(--bg)"></div>
+        <div class="color-info"><div class="color-name">--bg</div><div class="color-hex">#0e0e0f</div></div>
+      </div>
+      <div class="color-card">
+        <div class="color-sample" style="background: var(--bg2)"></div>
+        <div class="color-info"><div class="color-name">--bg2</div><div class="color-hex">#161618</div></div>
+      </div>
+      <div class="color-card">
+        <div class="color-sample" style="background: var(--bg3)"></div>
+        <div class="color-info"><div class="color-name">--bg3</div><div class="color-hex">#1e1e21</div></div>
+      </div>
+      <div class="color-card">
+        <div class="color-sample" style="background: var(--surface)"></div>
+        <div class="color-info"><div class="color-name">--surface</div><div class="color-hex">#242428</div></div>
+      </div>
+    </div>
+
+    <div class="uikit-section-title" style="margin-top: 2rem;">01. Colores (Acentos y Texto)</div>
+    <div class="uikit-grid-colors">
+      <div class="color-card">
+        <div class="color-sample" style="background: var(--accent)"></div>
+        <div class="color-info"><div class="color-name">--accent (Verde)</div><div class="color-hex">#c9f06e</div></div>
+      </div>
+      <div class="color-card">
+        <div class="color-sample" style="background: var(--accent2)"></div>
+        <div class="color-info"><div class="color-name">--accent2 (Menta)</div><div class="color-hex">#8de8c4</div></div>
+      </div>
+      <div class="color-card">
+        <div class="color-sample" style="background: var(--accent3)"></div>
+        <div class="color-info"><div class="color-name">--accent3 (Naranja)</div><div class="color-hex">#f0a96e</div></div>
+      </div>
+      <div class="color-card">
+        <div class="color-sample" style="background: var(--text)"></div>
+        <div class="color-info"><div class="color-name">--text</div><div class="color-hex">#f0ede8</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="uikit-section">
+    <div class="uikit-section-title">02. Tipografías</div>
+    <div class="uikit-showcase">
+      <p style="font-family: var(--font-serif); font-size: 2.5rem; margin-bottom: 0.5rem;">DM Serif Display — Títulos elegantes e <em>itálicas h1</em></p>
+      <p style="font-family: var(--font-sans); font-size: 1.1rem; color: var(--text2); margin-bottom: 1rem;">Outfit (Sans) — Cuerpo de texto, legible, moderno y limpio a cualquier tamaño.</p>
+      <p style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent);">DM Mono — Datos técnicos, badges, fechas, código y etiquetas.</p>
+    </div>
+  </section>
+
+  <section class="uikit-section">
+    <div class="uikit-section-title">03. Botones y CTAs</div>
+    <div class="uikit-showcase uikit-flex">
+      <a href="#" class="btn-primary" onclick="return false;">Botón Primario</a>
+      <a href="#" class="btn-ghost" onclick="return false;">Botón Fantasma / Secundario</a>
+    </div>
+
+    <div class="uikit-section-title" style="margin-top: 2rem;">03. Elementos de Menú / Navegación (Sidebar)</div>
+    <div class="uikit-showcase" style="max-width: 260px;">
+      <nav style="display: flex; flex-direction: column; gap: 0.25rem;">
+        <a class="nav-item active"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg> Item Activo</a>
+        <a class="nav-item"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg> Item Por Defecto</a>
+        <a class="nav-download nav-item"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Descarga CV</a>
+      </nav>
+    </div>
+  </section>
+
+  <section class="uikit-section">
+    <div class="uikit-section-title">04. Etiquetas (Tags / Badges / Filtros)</div>
+    <div class="uikit-showcase">
+      <div class="stack-tags" style="margin-bottom: 1.5rem;">
+        <span class="tag">Stack Tag (Hover me)</span>
+        <span class="tag">Linux</span>
+        <span class="tag">Python</span>
+      </div>
+      <div class="uikit-flex" style="margin-bottom: 1.5rem;">
+        <span class="ptag ptag-green">ptag-green</span>
+        <span class="ptag ptag-teal">ptag-teal</span>
+        <span class="ptag ptag-orange">ptag-orange</span>
+        <span class="ptag ptag-default">ptag-default</span>
+      </div>
+      <div class="filter-bar" style="position: relative; padding: 1rem; border-radius: 6px;">
+        <button class="filter-btn active">Filtro General</button>
+        <button class="filter-btn">Inactivo</button>
+      </div>
+      <div class="filter-bar blog-filters" style="position: relative; padding: 1rem; border-radius: 6px; margin-top: 0.5rem;">
+        <button class="filter-btn active">Filtro Blog Activo (Naranja)</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="uikit-section">
+    <div class="uikit-section-title">05. Elementos de Texto e Inyecciones de Blog (Rich Text)</div>
+    <div class="uikit-showcase">
+      <div class="post-body-content">
+        <h2>Encabezado H2 de ejemplo</h2>
+        <p>Párrafo de lectura regular usando las configuraciones del kit. Acá se puede apreciar el comportamiento de una palabra <strong>en negrita</strong> y cómo se destaca un <code>código en línea</code> dentro del texto fluido.</p>
+        
+        <h3>Encabezado H3 secundario</h3>
+        <p>Podés añadir enlaces que toman las variables de color correspondientes: <a href="#" onclick="return false;">este es un hipervínculo de prueba</a>.</p>
+        
+        <blockquote>
+          "Esto es un bloque de cita destacado (blockquote) que utiliza el degradado sutil y el acento naranja para romper el ritmo de lectura del post."
+        </blockquote>
+
+        <pre><code># Bloque de código estructurado (Pre)
+def init_gns3_topology():
+    print("Levantando entorno de simulación...")
+    return True</code></pre>
+      </div>
+    </div>
+  </section>
+  <script src="../Scripts/hamburguesa.js"></script>
+</main>
+</body>
+</html>

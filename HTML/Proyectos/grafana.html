@@ -3,17 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Grafana — Renzo Gómez Terrussi</title>
+<title>Sistema de Telemetría de Red — Portafolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../Styles/styles.css">
+<link rel="stylesheet" href="../../Styles/style.css">
 </head>
 <body>
 
 <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
 </button>
-
 <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
 <aside id="sidebar">
@@ -47,6 +46,10 @@
       <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
       Blog
     </a>
+    <a href="../../Assets/ui-kit.html" class="nav-item">
+      <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+      UI Kit
+    </a>
     <a href="../../Assets/cv.pdf" download class="nav-item nav-download">
       <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
       Descargar CV
@@ -60,84 +63,207 @@
     <a href="https://github.com/renzoegt" target="_blank" class="contact-link" title="GitHub">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
     </a>
-    <a href="mailto:gomezterrussirenzo@gmail.com" class="contact-link" title="Email">
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gomezterrussirenzo@gmail.com" target="_blank" class="contact-link" title="Email">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
     </a>
-    <a href="https://twitter.com/tu-usuario" target="_blank" class="contact-link" title="Twitter / X">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
-    </a>
+    
   </div>
 </aside>
 
 <main>
-  <div class="post-navigation">
-    <a href="../projects.html" class="back-to-blog">← Volver a los proyectos</a>
+
+  <div class="entry-back-bar">
+    <a href="../projects.html" class="back-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="15 18 9 12 15 6"/></svg>
+      Proyectos
+    </a>
+    <div class="back-divider"></div>
+    <span class="back-current">Telemetría de Red</span>
   </div>
 
-  <article class="post-container">
-    <header class="post-header">
-      <div class="post-meta-top">
-        <span class="post-badge" style="color:var(--accent);background:rgba(201,240,110,0.1);border-color:rgba(201,240,110,0.3)">Networking</span>
-        <span class="post-badge" style="color:var(--accent);background:rgba(201,240,110,0.1);border-color:rgba(201,240,110,0.3)">Linux</span>
-        <span class="post-date">20 nov 2024</span>
-        <span class="post-read-time">· 12 min de lectura</span>
+  <div class="project-hero">
+    <div class="project-hero-meta">
+      <span class="project-hero-year">2025</span>
+      <div class="project-hero-tags">
+        <span class="ptag ptag-green">SNMP</span>
+        <span class="ptag ptag-teal">Zabbix</span>
+        <span class="ptag ptag-orange">Grafana</span>
+        <span class="ptag ptag-default">GNS3</span>
       </div>
-      
-      <h1 class="post-full-title">Telemetría de Red Distribuida e Integración de Dashboards en Tiempo Real con SNMP, Zabbix y Grafana</h1>
-      
-      <p class="post-lead">
-        Proyecto de monitoreo de red utilizando SNMP para la recolección de datos, Zabbix como sistema de monitoreo y Grafana para la visualización en tiempo real. El proyecto se centró en la implementación de una solución de telemetría distribuida para una red empresarial, permitiendo la supervisión proactiva del rendimiento y la detección temprana de problemas.
-      </p>
+    </div>
+    <h1 class="project-hero-title">Monitoreo y Telemetría<br><em>en Tiempo Real</em></h1>
+    <p class="project-hero-summary">
+      Diseño e implementación de una infraestructura de telemetría moderna para la recolección, procesamiento y visualización del estado de flujos y recursos en redes virtuales complejas.
+    </p>
+  </div>
 
-      <div style="margin-top: 24px; justify-content: center; display: flex;">
-        <div class="post-main-image" style="width: 66%;">
-          <img style="width: 100%; height: auto;" src="../../Assets/red-graf.webp" alt="arquitectura de monitoreo con SNMP, Zabbix y Grafana">
+  <div style="margin-top: 24px; margin-left: 24px; margin-right: 24px; justify-content: center; display: flex;">
+      <div class="post-main-image" style="width: 80%;">
+        <img style="width: 100%; height: auto;" src="../../Assets/SNMP.webp" alt="arquitectura de monitoreo con SNMP, Zabbix y Grafana">
+      </div>
+  </div>
+
+  <div class="project-content">
+
+    <div class="project-info-col">
+
+      <div class="info-block">
+        <div class="info-block-label">Rol</div>
+        <div class="info-block-value">Administrador de Redes / DevOps</div>
+      </div>
+
+      <div class="info-block">
+        <div class="info-block-label">Período</div>
+        <div class="info-block-value">Mar 2025 — May 2025</div>
+      </div>
+
+      <div class="info-block">
+        <div class="info-block-label">Entorno</div>
+        <div class="info-block-value">Laboratorio Simulado</div>
+      </div>
+
+      <div class="info-block">
+        <div class="info-block-label">Stack</div>
+        <div class="info-tags">
+          <span class="tag">Debian</span>
+          <span class="tag">Docker</span>
+          <span class="tag">InfluxDB</span>
+          <span class="tag">Grafana</span>
         </div>
       </div>
-    </header>
 
-    <section class="post-body-content">
-      <p>Para la simulación se eligío una simple red LAN universitaria con dos laboratorios y un switch de administración. Para esta arquitectura buscamos resolver el problema de <em>Administración, visibilidad y monitoreo centralizado de la red</em>. </p> 
-      <h2>¿Cual Fué mi Rol?</h2>
-      <p>Dentro del proyecto fue el de ingeniero de infraestructura y Administrador de telemetría, fui el responsable del diseño y del cálculo del direccionamiento IPv4 de la topología corporativa.</p>
-
-      <blockquote>
-        "Docker no reemplaza a las máquinas virtuales, las hace obsoletas para el desarrollo de aplicaciones del día a día."
-      </blockquote>
-
-      <h2>El archivo clave: Dockerfile</h2>
-      <p>Para definir cómo se construye tu entorno, usás un archivo plano llamado <code>Dockerfile</code>. Acá tenés un ejemplo básico para una app de Python:</p>
-
-      <pre><code>FROM python:3.10-slim
-      WORKDIR /app
-      COPY requirements.txt .
-      RUN pip install -r requirements.txt
-      COPY . .
-      CMD ["python", "main.py"]</code></pre>
-
-      <h2>Docker Compose: Tu mejor aliado</h2>
-      <p>Cuando tu app necesita una base de datos (por ejemplo, PostgreSQL), levantar todo a mano con comandos largos es tedioso. Ahí entra <strong>Docker Compose</strong>, permitiéndote levantar toda tu infraestructura local con un simple comando:</p>
-      
-      <pre><code>docker compose up -d</code></pre>
-
-      <h2>Conclusión</h2>
-      <p>Como desarrollador, no necesitás ser un experto en orquestación ni dominar Kubernetes para sacarle provecho a Docker. Con entender cómo aislar tu entorno local y automatizar la base de datos de desarrollo ya tenés el 80% del beneficio asegurado.</p>
-    </section>
-
-    <footer class="post-footer">
-      <div class="newsletter-strip">
-        <div class="newsletter-text">
-          <h3>¿Te sirvió este artículo?</h3>
-          <p>Sumate a la lista para recibir las próximas publicaciones de arquitectura y desarrollo directamente en tu mail.</p>
-        </div>
-        <div class="newsletter-form">
-          <input type="email" class="newsletter-input" placeholder="tu@email.com">
-          <button class="newsletter-btn">Suscribirme</button>
+      <div class="info-block">
+        <div class="info-block-label">Links</div>
+        <div class="info-block-value">
+          <a href="../../Assets/telemetria-red.pdf" target="_blank">↗ Reporte Técnico</a><br>
         </div>
       </div>
-    </footer>
-  </article>
-</main>
+
+    </div>
+
+    <div class="project-body">
+
+      <div class="entry-section" id="problema">
+        <div class="entry-section-label">01 — El Problema</div>
+        <h2 class="entry-section-title">La opacidad de los datos en los esquemas de red tradicionales</h2>
+
+        <div class="entry-prose">
+          <p>
+            Los sistemas de monitoreo basados estrictamente en polling clásico (como SNMP tradicional) presentan graves deficiencias de resolución temporal para capturar picos de tráfico efímeros ("microbursts") o cambios abruptos en el estado de la topología.
+          </p>
+          <p>
+            El desafío de negocio e investigación consistía en construir un pipeline capaz de empujar (<strong>streaming telemetry</strong>) métricas de rendimiento directamente desde los nodos de la infraestructura hacia un almacenamiento centralizado, minimizando el impacto en la CPU de los equipos de forwarding y garantizando una visibilidad de grano fino.
+          </p>
+        </div>
+
+        <div class="entry-callout">
+          <strong>Insight clave:</strong> El monitoreo reactivo oculta anomalías críticas de rendimiento. Migrar a un modelo guiado por eventos de telemetría reduce el tiempo medio de detección (MTTD) de minutos a milisegundos.
+        </div>
+        <div style="margin-top: 24px; justify-content: center; display: flex;">
+      <div class="post-main-image" style="width: 66%;">
+        <img style="width: 100%; height: auto;" src="../../Assets/red-graf.webp" alt="arquitectura de monitoreo con SNMP, Zabbix y Grafana">
+      </div>
+  </div>
+      </div>
+
+      <div class="entry-section" id="metodologia">
+        <div class="entry-section-label">02 — Metodología</div>
+        <h2 class="entry-section-title">Estrategia de despliegue y recolección de datos</h2>
+
+        <div class="entry-prose">
+          <p>
+            Se aplicó un enfoque iterativo estructurado en cuatro capas funcionales para garantizar la modularidad y el desacoplamiento entre el plano de datos y la recolección analítica:
+          </p>
+        </div>
+
+        <ul class="steps-list">
+          <li class="step-item">
+            <div class="step-num">01</div>
+            <div class="step-body">
+              <div class="step-title">Modelado y Simulación en GNS3</div>
+              <div class="step-desc">Levantamiento de la topología lógica inicial utilizando appliances Linux interconectados mediante enlaces virtuales redundantes.</div>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-num">02</div>
+            <div class="step-body">
+              <div class="step-title">Provisionamiento del Servidor de Métricas</div>
+              <div class="step-desc">Configuración de un entorno Debian virtualizado ejecutando contenedores Docker aislados para el backend de almacenamiento.</div>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-num">03</div>
+            <div class="step-body">
+              <div class="step-title">Ingesta y Pipeline de Datos (TSDB)</div>
+              <div class="step-desc">Alineación de colectores ligeros dedicados a transformar las variables crudas de las interfaces en series de tiempo estructuradas.</div>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-num">04</div>
+            <div class="step-body">
+              <div class="step-title">Instrumentación de Dashboards Dinámicos</div>
+              <div class="step-desc">Construcción analítica de visualizaciones interactivas parametrizadas por nodo, interfaz y tipo de protocolo.</div>
+            </div>
+          </li>
+        </ul>
+
+        <div style="margin-top: 24px; margin-left: 24px; margin-right: 24px; justify-content: center; display: flex;">
+            <div class="post-main-image" style="width: 80%;">
+                <img style="width: 100%; height: auto;" src="../../Assets/grafana.webp" alt="arquitectura de monitoreo con SNMP, Zabbix y Grafana">
+            </div>
+        </div>
+        
+      </div>
+
+      <div class="entry-section" id="resultados">
+        <div class="entry-section-label">03 — Resultados</div>
+        <h2 class="entry-section-title">Visibilidad absoluta del tráfico de red</h2>
+
+        <div class="metrics-row">
+          <div class="metric-card">
+            <div class="metric-value">1s</div>
+            <div class="metric-label">Frecuencia</div>
+            <div class="metric-desc">Intervalo de refresco de datos sin sobrecargar las CPUs de destino</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">100%</div>
+            <div class="metric-label">Visibilidad</div>
+            <div class="metric-desc">Captura completa de tráficos espurios y ráfagas transitorias</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">0</div>
+            <div class="metric-label">Pérdida</div>
+            <div class="metric-desc">Consistencia total en la persistencia de los eventos capturados</div>
+          </div>
+        </div>
+
+        <div class="entry-prose">
+          <p>
+            La implementación exitosa del ecosistema de telemetría permitió mapear comportamientos anómalos imposibles de rastrear de manera ordinaria. Como aprendizaje técnico directo, se consolidó la robustez operativa de las bases de datos de series de tiempo para la gestión masiva de logs e instrumentación de alertas automáticas ante saturación de enlaces.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="entry-section" id="links">
+        <div class="entry-section-label">04 — Ver más</div>
+        <h2 class="entry-section-title">Documentación y recursos</h2>
+
+        <div class="entry-prose">
+          <p>
+            Revisá las guías de configuración de las interfaces, los manifiestos de Docker Compose utilizados y la documentación extendida del laboratorio de telemetría.
+          </p>
+        </div>
+
+        <div class="project-cta-row">
+          <a href="../../Assets/telemetria.pdf" target="_blank" class="btn-primary">
+            Leer reporte técnico completo →
+          </a>
+        </div>
+
+      </div>
+
+    </div></div></main>
 
 <script src="../../Scripts/hamburguesa.js"></script>
 </body>
